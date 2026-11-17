@@ -36,7 +36,7 @@ Description: |
   storage = icechunk.s3_storage(
       bucket="tnc-human-modification",
       prefix="hm_probability_forecast",
-      region="us-east-1",
+      region="us-west-2",
       anonymous=True,
   )
   repo = icechunk.Repository.open(storage)
@@ -87,7 +87,7 @@ Resources:
       containing the HM forecast quantile functions for 2025-2040 (group hm_prob_forecast) and
       the observed HM record for 1990-2020 (group hm_observed), uint16-encoded, EPSG:4326, 0.009 degrees.
     ARN: arn:aws:s3:::tnc-human-modification
-    Region: us-east-1
+    Region: us-west-2
     Type: S3 Bucket
     Explore:
       - '[Browse Bucket](https://tnc-human-modification.s3.amazonaws.com/index.html)'
